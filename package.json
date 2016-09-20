@@ -1,0 +1,69 @@
+{
+  "name": "feathers-can-react-starter",
+  "version": "0.0.1",
+  "description": "Feathers can-React starter client site.  Requires separate Feathers server.",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm run eslint && testee src/test.html --browsers firefox --reporter Spec",
+    "start": "done-serve --port 8080 --static",
+    "develop": "done-serve --develop --port 8080 --static",
+    "document": "documentjs",
+    "build": "node build",
+    "eslint": "semistandard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feathersjs/feathers-can-react-starter.git"
+  },
+  "keywords": [
+    "feathersjs",
+    "admin-ui"
+  ],
+  "author": "FeathersJS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feathersjs/feathers-can-react-starter/issues"
+  },
+  "homepage": "https://github.com/feathersjs/feathers-can-react-starter#readme",
+  "dependencies": {
+    "@bigab/can-react": "0.0.3",
+    "can-define": "^0.7.29",
+    "can-route": "^3.0.0-pre.15",
+    "canjs-feathers": "^1.0.1",
+    "classnames": "^2.2.5",
+    "feathers": "^2.0.2",
+    "feathers-authentication": "^0.7.10",
+    "feathers-hooks": "^1.5.7",
+    "feathers-reactive": "^0.4.0",
+    "feathers-socketio": "^1.4.1",
+    "jwt-decode": "^2.1.0",
+    "lodash": "^4.15.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "rxjs": "^5.0.0-beta.12",
+    "steal-socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "done-serve": "^0.3.0-pre.0",
+    "mocha": "^3.0.2",
+    "semistandard": "^9.0.0",
+    "steal": "^1.0.0-rc.3",
+    "steal-builtins": "^1.0.0",
+    "steal-mocha": "0.0.3",
+    "steal-tools": "^1.0.0-rc.1",
+    "testee": "^0.3.0-pre.1"
+  },
+  "system": {
+    "main": "src/app.js",
+    "transpiler": "babel",
+    "babelOptions": {
+      "blacklist": []
+    },
+    "configDependencies": [
+      "live-reload"
+    ],
+    "ext": {
+      "jsx": "steal-jsx"
+    }
+  }
+}
