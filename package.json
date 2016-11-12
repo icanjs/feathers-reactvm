@@ -1,7 +1,7 @@
 {
-  "name": "feathers-can-react-starter",
+  "name": "feathers-reactvm-boilerplate",
   "version": "0.0.1",
-  "description": "Feathers can-React starter client site.  Requires separate Feathers server.",
+  "description": "Feathers & ReactVM Boilerplate.  Requires separate Feathers server.",
   "main": "index.html",
   "scripts": {
     "test": "npm run eslint && testee src/test.html --browsers firefox --reporter Spec",
@@ -13,21 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/feathersjs/feathers-can-react-starter.git"
+    "url": "git+https://github.com/feathersjs/feathers-reactvm-boilerplate.git"
   },
   "keywords": [
     "feathersjs",
     "admin-ui"
   ],
-  "author": "FeathersJS",
+  "author": "Marshall Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-can-react-starter/issues"
+    "url": "https://github.com/feathersjs/feathers-reactvm-boilerplate/issues"
   },
-  "homepage": "https://github.com/feathersjs/feathers-can-react-starter#readme",
+  "homepage": "https://github.com/feathersjs/feathers-reactvm-boilerplate#readme",
   "dependencies": {
     "@bigab/can-react": "0.0.3",
-    "can-define": "^0.7.29",
+    "can-connect": "^1.0.11",
+    "can-define": "^1.0.4",
     "can-route": "^3.0.0-pre.15",
     "canjs-feathers": "^1.0.1",
     "classnames": "^2.2.5",
@@ -41,7 +42,7 @@
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "rxjs": "^5.0.0-beta.12",
-    "steal-socket.io": "^2.0.4"
+    "steal-socket.io": "^4.0.3"
   },
   "devDependencies": {
     "done-serve": "^0.3.0-pre.0",
