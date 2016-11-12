@@ -1,4 +1,4 @@
-feathers-can-react-starter (Client App)
+feathers-reactvm-boilerplate
 
 This is a starter client app that uses the following:
 
