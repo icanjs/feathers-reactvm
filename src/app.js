@@ -1,4 +1,4 @@
-import { connect } from '@bigab/can-react';
+import { connect } from '@bigab/react-view-models';
 import DefineMap from 'can-define/map/';
 import AppHome from './app.jsx';
 import React from 'react';

@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/feathersjs/feathers-reactvm-boilerplate#readme",
   "dependencies": {
-    "@bigab/can-react": "0.0.3",
+    "@bigab/react-view-models": "github:bigab/react-view-models",
     "can-connect": "^1.0.11",
     "can-define": "^1.0.4",
     "can-route": "^3.0.0-pre.15",
