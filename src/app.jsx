@@ -1,9 +1,11 @@
 import React from 'react';
 
-const App = ({message}) => {
+const App = ({page, changePage}) => {
   return (
     <div>
-      {message}
+      <h1>The current page is {page}</h1>
+      <button type='button' onClick={changePage('home')}> Home </button>
+      <button type='button' onClick={changePage('dashboard')}> Dashboard </button>
     </div>
   );
 };
