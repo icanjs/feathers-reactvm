@@ -5,8 +5,9 @@
   "main": "index.html",
   "scripts": {
     "test": "npm run eslint && testee src/test.html --browsers firefox --reporter Spec",
-    "start": "done-serve --port 8080 --static",
+    "start": "./node_modules/.bin/concurrently \"npm run develop\" \"npm run feathers\"",
     "develop": "done-serve --develop --port 8080 --static",
+    "feathers": "node ./server/src/index",
     "document": "documentjs",
     "build": "node build",
     "eslint": "semistandard"
@@ -47,6 +48,7 @@
     "steal-socket.io": "^4.0.3"
   },
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "done-serve": "^0.3.0-pre.0",
     "mocha": "^3.0.2",
     "semistandard": "^9.0.0",

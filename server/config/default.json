@@ -1,0 +1,19 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "nedb": "../data/",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "EkI5wE8M3fa8uIxTVpske3OAsbQYGzGXb9/I7sKGUCqqezsLNNJvpeMOnfqyjyZcV7PQTEcYC+2tsrBb4GDQrQ=="
+    },
+    "local": {},
+    "github": {
+      "clientID": "your github client id",
+      "clientSecret": "your github client secret",
+      "permissions": {
+        "scope": []
+      }
+    }
+  }
+}

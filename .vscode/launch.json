@@ -8,13 +8,11 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceRoot}/node_modules/.bin/done-serve",
+      "program": "${workspaceRoot}/node_modules/.bin/concurrently",
       "cwd": "${workspaceRoot}",
       "args": [
-        "--develop",
-        "--port",
-        "8080",
-        "--static"
+        "./node_modules/.bin/done-serve --develop --port 8080 --static",
+        "node ./server/src/index"
       ]
     },
     {
