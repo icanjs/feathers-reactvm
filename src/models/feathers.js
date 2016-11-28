@@ -23,8 +23,8 @@ const app = feathers()
   }));
 
 app.getSession = function () {
-  let token = app.get('token'),
-    session;
+  let token = app.get('token');
+  let session;
 
   if (token) {
     session = decode(token);

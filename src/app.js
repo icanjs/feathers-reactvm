@@ -1,4 +1,4 @@
-import { connect } from '@bigab/react-view-models';
+import { connect } from 'react-view-models';
 import DefineMap from 'can-define/map/';
 import AppHome from './app.jsx';
 import React from 'react';
@@ -18,9 +18,23 @@ export const ViewModel = DefineMap.extend({
     }
   },
 
+  subpage: {
+    get: () => route.data.subpage,
+    set: (val) => {
+      route.data.subpage = val;
+    }
+  },
+
   changePage (newPage) {
     return function () {
       this.page = newPage;
+      this.subpage = undefined;
+    }.bind(this);
+  },
+
+  setRoute (obj) {
+    return function () {
+      this.set(obj);
     }.bind(this);
   }
 });
