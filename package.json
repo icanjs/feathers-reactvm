@@ -4,13 +4,13 @@
   "description": "Feathers & ReactVM Boilerplate.  Requires separate Feathers server.",
   "main": "index.html",
   "scripts": {
-    "test": "npm run eslint && testee src/test.html --browsers firefox --reporter Spec",
-    "start": "./node_modules/.bin/concurrently \"npm run develop\" \"npm run feathers\"",
+    "test": "npm run lint && testee src/test.html --browsers firefox --reporter Spec",
+    "start": "concurrently \"npm run develop\" \"npm run feathers\" \"steal-tools live-reload\" ",
     "develop": "done-serve --develop --port 8080 --static",
     "feathers": "node ./server/src/index",
     "document": "documentjs",
     "build": "node build",
-    "eslint": "semistandard"
+    "lint": "semistandard --fix"
   },
   "repository": {
     "type": "git",
