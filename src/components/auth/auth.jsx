@@ -15,7 +15,6 @@ import SignupForm from 'auth-component/forms/signup/';
 import LoginForm from 'auth-component/forms/login/';
 
 export default ({tab}) => {
-  console.log('auth tab', tab);
   return (
     <AuthContainer>
       <Tabs activeTab={tab} routeAttr='page' />
