@@ -1,14 +1,10 @@
 import React from 'react';
 import Auth from '~/components/auth/';
+import Dashboard from '~/components/dashboard/';
 import Home from '~/components/home/';
 import {Route} from 'can-route-react';
 
 export default ({page, changePage, setRoute}) => {
-  const Dashboard = function () {
-    return (
-      <div style={{paddingTop: '10px'}}>Welcome to the Dashboard Page!</div>
-    );
-  };
   return (
     <div>
       <h1>The current page is {page}</h1>
