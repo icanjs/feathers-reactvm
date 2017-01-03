@@ -6,6 +6,16 @@ import ReactDOM from 'react-dom';
 import './routes';
 import route from 'can-route';
 // import 'can-route-pushstate';
+import './styles.less';
+import Session from '~/models/session';
+
+var pages = {
+  home: 'public',
+  about: 'public',
+  login: 'public',
+  signup: 'public',
+  dashboard: 'private'
+};
 
 export const ViewModel = DefineMap.extend({
   '*': {
@@ -13,9 +23,26 @@ export const ViewModel = DefineMap.extend({
   },
 
   page: {
-    get: () => route.data.page,
-    set: (val) => {
+    set (val) {
       route.data.page = val;
+    },
+    get (lastSetVal) {
+      let page = route.data.page || lastSetVal;
+
+      if (!page) {
+        return;
+      }
+
+      if (!this.session) {
+        if (pages[page] === 'private') {
+          page = 'login';
+        }
+      }
+      if (!pages[page]) {
+        page = 'four-oh-four';
+      }
+      route.data.page = page;
+      return page;
     }
   },
 
@@ -25,10 +52,10 @@ export const ViewModel = DefineMap.extend({
     }.bind(this);
   },
 
-  setRoute (obj) {
-    return function () {
-      this.set(obj);
-    }.bind(this);
+  session: {
+    get () {
+      return Session.current;
+    }
   }
 });
 
