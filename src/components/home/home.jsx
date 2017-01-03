@@ -1,7 +1,13 @@
 import React from 'react';
+import logo from '~/img/logo.svg';
+import SVGInline from 'react-svg-inline';
 
-export default () => {
+export default ({changePage}) => {
   return (
-    <div style={{paddingTop: '10px'}}>Welcome to the Home Page!</div>
+    <section className='home-page'>
+      <SVGInline svg={logo} />
+      <div style={{paddingTop: '10px'}}>Welcome to My Awesome App!</div>
+      <button type='button' onClick={changePage('signup')} >Signup</button>
+    </section>
   );
 };
