@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './routes';
 import route from 'can-route';
+// import 'can-route-pushstate';
 
 export const ViewModel = DefineMap.extend({
   '*': {
@@ -18,17 +19,9 @@ export const ViewModel = DefineMap.extend({
     }
   },
 
-  subpage: {
-    get: () => route.data.subpage,
-    set: (val) => {
-      route.data.subpage = val;
-    }
-  },
-
   changePage (newPage) {
     return function () {
       this.page = newPage;
-      this.subpage = undefined;
     }.bind(this);
   },
 

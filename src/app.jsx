@@ -1,22 +1,29 @@
 import React from 'react';
-import AuthComponent from '~/components/auth/';
+import Auth from '~/components/auth/';
+import {Route} from 'can-route-react';
 
-export default ({page, subpage, changePage, setRoute}) => {
-  var component;
-  switch (page) {
-    case 'auth':
-      component = <AuthComponent subpage={subpage} />;
-      break;
-  }
-
+export default ({page, changePage, setRoute}) => {
+  const Home = function () {
+    return (
+      <div style={{paddingTop: '10px'}}>Welcome to the Home Page!</div>
+    );
+  };
+  const Dashboard = function () {
+    return (
+      <div style={{paddingTop: '10px'}}>Welcome to the Dashboard Page!</div>
+    );
+  };
   return (
     <div>
       <h1>The current page is {page}</h1>
       <button type='button' onClick={changePage('home')}> Home </button>
       <button type='button' onClick={changePage('dashboard')}> Dashboard </button>
-      <button type='button' onClick={setRoute({page: 'auth', subpage: 'signup'})}> Signup </button>
-      <button type='button' onClick={setRoute({page: 'auth', subpage: 'login'})}> Login </button>
-      {component}
+      <button type='button' onClick={changePage('signup')}> Signup </button>
+      <button type='button' onClick={changePage('login')}> Login </button>
+
+      <Route data={{page: 'home'}} Component={Home} />
+      <Route data={{page: 'dashboard'}} Component={Dashboard} />
+      { (page === 'login' || page === 'signup') && <Auth tab={page} /> }
     </div>
   );
-}
+};
