@@ -1,5 +1,4 @@
 import React from 'react';
-import {Route} from 'can-route-react';
 
 import SVGInline from 'react-svg-inline';
 import logo from '~/img/logo.svg';
