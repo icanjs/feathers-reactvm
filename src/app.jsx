@@ -7,7 +7,6 @@ import {Route} from 'can-route-react';
 export default ({page, changePage, setRoute}) => {
   return (
     <div>
-      <h1>The current page is {page}</h1>
       <button type='button' onClick={changePage('home')}> Home </button>
       <button type='button' onClick={changePage('dashboard')}> Dashboard </button>
       <button type='button' onClick={changePage('signup')}> Signup </button>
