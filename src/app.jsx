@@ -1,13 +1,9 @@
 import React from 'react';
 import Auth from '~/components/auth/';
+import Home from '~/components/home/';
 import {Route} from 'can-route-react';
 
 export default ({page, changePage, setRoute}) => {
-  const Home = function () {
-    return (
-      <div style={{paddingTop: '10px'}}>Welcome to the Home Page!</div>
-    );
-  };
   const Dashboard = function () {
     return (
       <div style={{paddingTop: '10px'}}>Welcome to the Dashboard Page!</div>
