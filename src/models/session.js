@@ -12,7 +12,7 @@ import dataCallbacks from 'can-connect/data/callbacks/';
 import realtime from 'can-connect/real-time/';
 
 import DefineMap from 'can-define/map/';
-import User from 'bitcentive/models/user';
+import User from '~/models/user';
 
 export const Session = DefineMap.extend('Session', {
   seal: false
