@@ -15,23 +15,25 @@ import LoginForm from 'auth-component/forms/login/';
 
 export default ({tab}) => {
   return (
-    <AuthContainer>
-      <Tabs activeTab={tab} routeAttr='page' />
+    <div className='auth-page'>
+      <AuthContainer>
+        <Tabs activeTab={tab} routeAttr='page' />
 
-      <div className='auth-branding'>
-        <SVGInline svg={logo} />
-      </div>
+        <div className='auth-branding'>
+          <SVGInline svg={logo} />
+        </div>
 
-      <div className='oauth-buttons'>
-        <FacebookButton popup='true' />
-        <GitHubButton popup='true' />
-        <GoogleButton popup='true' />
-        <MicrosoftButton popup='true' />
-        <TwitterButton popup='true' />
-      </div>
+        <div className='oauth-buttons'>
+          <FacebookButton popup='true' />
+          <GitHubButton popup='true' />
+          <GoogleButton popup='true' />
+          <MicrosoftButton popup='true' />
+          <TwitterButton popup='true' />
+        </div>
 
-      {tab === 'login' && <LoginForm />}
-      {tab === 'signup' && <SignupForm />}
-    </AuthContainer>
+        {tab === 'login' && <LoginForm />}
+        {tab === 'signup' && <SignupForm />}
+      </AuthContainer>
+    </div>
   );
 };
