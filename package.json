@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/feathersjs/feathers-reactvm-boilerplate#readme",
   "dependencies": {
-    "auth-component": "^4.0.1",
+    "auth-component": "^4.0.2",
     "can-compute": "^3.0.5",
     "can-connect": "^1.0.21",
     "can-connect-feathers": "^3.0.8",
@@ -35,6 +35,7 @@
     "can-route": "^3.0.6",
     "can-route-pushstate": "^3.0.1",
     "can-route-react": "^0.1.2",
+    "can-set": "^1.0.3",
     "classnames": "^2.2.5",
     "feathers": "^2.0.3",
     "feathers-authentication-client": "^0.1.6",
@@ -48,7 +49,8 @@
     "react-dom": "^15.4.1",
     "react-svg-inline": "^1.2.0",
     "react-view-models": "0.0.7",
-    "rxjs": "^5.0.2"
+    "rxjs": "^5.0.2",
+    "steal-socket.io": "^4.0.8"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
@@ -59,6 +61,7 @@
     "steal-builtins": "^1.0.0",
     "steal-less": "^1.0.1",
     "steal-mocha": "^1.0.0",
+    "steal-svg": "^0.0.5",
     "steal-tools": "^1.0.1",
     "testee": "^0.3.0-pre.1"
   },
@@ -80,8 +83,7 @@
       "steal-svg"
     ],
     "ext": {
-      "jsx": "steal-jsx",
-      "svg": "steal-svg"
+      "jsx": "steal-jsx"
     }
   }
 }
