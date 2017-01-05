@@ -16,7 +16,7 @@ const services = require('./services');
 
 const app = feathers();
 
-app.configure(configuration(path.join(__dirname, '..')));
+app.configure(configuration(path.join(__dirname, 'server')));
 
 app.use(compress())
   .options('*', cors())
