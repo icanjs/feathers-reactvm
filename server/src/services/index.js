@@ -1,13 +1,13 @@
 'use strict';
 const message = require('./message');
 const authentication = require('./authentication');
-const user = require('./user');
+const userService = require('./users');
 
-module.exports = function() {
+module.exports = function () {
   const app = this;
 
 
+  app.configure(userService);
   app.configure(authentication);
-  app.configure(user);
   app.configure(message);
 };

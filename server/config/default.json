@@ -4,15 +4,38 @@
   "nedb": "../data/",
   "public": "../public/",
   "auth": {
-    "token": {
-      "secret": "EkI5wE8M3fa8uIxTVpske3OAsbQYGzGXb9/I7sKGUCqqezsLNNJvpeMOnfqyjyZcV7PQTEcYC+2tsrBb4GDQrQ=="
+    "cookie": {
+      "enabled": true,
+      "secure": false,
+      "name": "feathers-jwt"
     },
-    "local": {},
+    "entity": "user",
+    "service": "/users",
+    "secret": "EkI5wE8M3fa8uIxTVpske3OAsbQYGzGXb9/I7sKGUCqqezsLNNJvpeMOnfqyjyZcV7PQTEcYC+2tsrBb4GDQrQ==",
+    "local": {
+      "name": "local",
+      "entity": "user"
+    },
+    "jwt": {
+      "issuer": "react-view-models",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "user": {
+      "service": "/users",
+      "idField": "_id",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
     "github": {
-      "clientID": "your github client id",
-      "clientSecret": "your github client secret",
+      "name": "github",
+      "service": "/users",
+      "successRedirect": "/auth/success",
+      "callbackURL": "/auth/github/callback",
+      "clientID": "f425f8fe2f98014a32d5",
+      "clientSecret": "GITHUB CLIENT SECRET",
       "permissions": {
-        "scope": []
+        "scope": [ ]
       }
     }
   }
