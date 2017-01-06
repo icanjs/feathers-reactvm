@@ -13,7 +13,6 @@ module.exports = function () {
 
   config.github.Strategy = GithubStrategy;
   config.github.tokenStrategy = GithubTokenStrategy;
-  console.log(config.github);
 
   app.set('auth', config);
   app.configure(auth(config));
