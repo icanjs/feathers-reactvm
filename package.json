@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/feathersjs/feathers-reactvm-boilerplate#readme",
   "dependencies": {
-    "auth-component": "^4.0.2",
+    "auth-component": "^5.0.6",
     "can-compute": "^3.0.5",
     "can-connect": "^1.0.21",
     "can-connect-feathers": "^3.0.8",
@@ -48,7 +48,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-svg-inline": "^1.2.0",
-    "react-view-models": "0.0.7",
+    "react-view-models": "^0.0.8",
     "rxjs": "^5.0.2",
     "steal-socket.io": "^4.0.8"
   },
