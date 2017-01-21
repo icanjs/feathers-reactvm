@@ -8,7 +8,7 @@ import About from '~/components/about/';
 export default ({page, changePage, session}) => {
   return (
     <div>
-      <Menu page={page} changePage={changePage} />
+      <Menu page={page} changePage={changePage} session={session} />
 
       { page === 'home' && <Home changePage={changePage} />}
       { page === 'about' && <About />}

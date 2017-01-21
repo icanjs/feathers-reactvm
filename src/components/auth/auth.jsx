@@ -13,12 +13,14 @@ import authManagement from '~/models/auth-management';
 import SVGInline from 'react-svg-inline';
 import logo from '~/img/logo.svg';
 import Session from '~/models/session';
+import User from '~/models/user';
+import route from 'can-route';
 
 
 const Signup = () => {
   return (
     <SignupForm
-      Model={Session}
+      Model={User}
       defaultValues={{
         email: '',
         password: '',
@@ -26,7 +28,7 @@ const Signup = () => {
       }}
       validate={({email, emailError, password}) => {
         return {
-          email: !email ? 'E-mail address is required' : emailError || null,
+          email: !email ? 'E-mail address is required' : emailError && 'e-mail not available' || null,
           password: !password ? 'Password is required' : null
         };
       }}
@@ -48,6 +50,9 @@ const Login = () => {
           email: !email ? 'E-mail address is required' : null,
           password: !password ? 'Password is required' : null
         };
+      }}
+      onSuccess={() => {
+        route.data.page = 'dashboard';
       }} />
   );
 };
