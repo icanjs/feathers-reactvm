@@ -6,12 +6,8 @@ import algebra from './algebra';
 
 var User = DefineMap.extend('User', {
   _id: 'string',
-  email: {
-    type: 'string'
-  },
-  password: {
-    type: 'string'
-  }
+  email: 'string',
+  password: 'string'
 });
 
 User.List = DefineList.extend({
