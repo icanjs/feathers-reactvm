@@ -9,9 +9,48 @@ import TwitterButton from 'auth-component/buttons/twitter/';
 import SignupForm from 'auth-component/forms/local-signup/';
 import LoginForm from 'auth-component/forms/local-login/';
 
+import authManagement from '~/models/auth-management';
 import SVGInline from 'react-svg-inline';
 import logo from '~/img/logo.svg';
 import Session from '~/models/session';
+
+
+const Signup = () => {
+  return (
+    <SignupForm
+      Model={Session}
+      defaultValues={{
+        email: '',
+        password: '',
+        emailError: ''
+      }}
+      validate={({email, emailError, password}) => {
+        return {
+          email: !email ? 'E-mail address is required' : emailError || null,
+          password: !password ? 'Password is required' : null
+        };
+      }}
+      asyncValidation={query => authManagement.checkUnique(query)} />
+  );
+};
+
+const Login = () => {
+  return (
+    <LoginForm
+      Model={Session}
+      strategy='local'
+      defaultValues={{
+        email: '',
+        password: ''
+      }}
+      validate={({email, password}) => {
+        return {
+          email: !email ? 'E-mail address is required' : null,
+          password: !password ? 'Password is required' : null
+        };
+      }} />
+  );
+};
 
 export default ({tab}) => {
   return (
@@ -31,8 +70,8 @@ export default ({tab}) => {
           <TwitterButton popup='true' />
         </div>
 
-        {tab === 'login' && <LoginForm Model={Session} />}
-        {tab === 'signup' && <SignupForm Model={Session} />}
+        {tab === 'login' && <Login />}
+        {tab === 'signup' && <Signup />}
       </AuthContainer>
     </div>
   );
