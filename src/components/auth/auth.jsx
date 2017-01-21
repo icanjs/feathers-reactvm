@@ -1,8 +1,4 @@
 import React from 'react';
-
-import SVGInline from 'react-svg-inline';
-import logo from '~/img/logo.svg';
-
 import AuthContainer from 'auth-component/auth-container/auth-container';
 import Tabs from 'auth-component/tabs/can-route';
 import FacebookButton from 'auth-component/buttons/facebook/';
@@ -10,8 +6,12 @@ import GitHubButton from 'auth-component/buttons/github/';
 import GoogleButton from 'auth-component/buttons/google/';
 import MicrosoftButton from 'auth-component/buttons/microsoft/';
 import TwitterButton from 'auth-component/buttons/twitter/';
-import SignupForm from 'auth-component/forms/signup/';
-import LoginForm from 'auth-component/forms/login/';
+import SignupForm from 'auth-component/forms/local-signup/';
+import LoginForm from 'auth-component/forms/local-login/';
+
+import SVGInline from 'react-svg-inline';
+import logo from '~/img/logo.svg';
+import Session from '~/models/session';
 
 export default ({tab}) => {
   return (
@@ -31,8 +31,8 @@ export default ({tab}) => {
           <TwitterButton popup='true' />
         </div>
 
-        {tab === 'login' && <LoginForm />}
-        {tab === 'signup' && <SignupForm />}
+        {tab === 'login' && <LoginForm Model={Session} />}
+        {tab === 'signup' && <SignupForm Model={Session} />}
       </AuthContainer>
     </div>
   );
