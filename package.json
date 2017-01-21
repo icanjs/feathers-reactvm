@@ -39,6 +39,7 @@
     "classnames": "^2.2.5",
     "feathers": "^2.0.3",
     "feathers-authentication-client": "^0.1.6",
+    "feathers-authentication-management": "^0.1.6",
     "feathers-authentication-popups": "^0.1.2",
     "feathers-hooks": "^1.7.1",
     "feathers-reactive": "^0.4.1",
