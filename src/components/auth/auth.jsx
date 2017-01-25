@@ -16,7 +16,6 @@ import Session from '~/models/session';
 import User from '~/models/user';
 import route from 'can-route';
 
-
 const Signup = () => {
   return (
     <SignupForm
