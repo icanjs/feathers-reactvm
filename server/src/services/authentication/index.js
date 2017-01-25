@@ -3,6 +3,7 @@
 const auth = require('feathers-authentication');
 const local = require('feathers-authentication-local');
 const oauth2 = require('feathers-authentication-oauth2');
+const jwt = require('feathers-authentication-jwt');
 const GithubStrategy = require('passport-github').Strategy;
 const GithubTokenStrategy = require('passport-github-token');
 const authManagement = require('feathers-authentication-management');
@@ -17,6 +18,7 @@ module.exports = function () {
 
   app.set('auth', config);
   app.configure(auth(config))
+    .configure(jwt())
     .configure(local())
     .configure(oauth2(config.github))
     .configure(authManagement());
